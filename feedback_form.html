@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Feedback Form</title>
+    <style>
+      /* CSS styles for the form */
+      form {
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #f5f5f5;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      label {
+        display: block;
+        margin-bottom: 10px;
+        font-weight: bold;
+      }
+      input[type="text"],
+      select,
+      textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+        font-size: 16px;
+      }
+      textarea {
+        height: 150px;
+      }
+      input[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      input[type="submit"]:hover {
+        background-color: #45a049;
+      }
+
+      /* CSS styles for the vertical menu */
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 150px;
+        background-color: #f1f1f1;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      li a {
+        display: block;
+        color: #000;
+        padding: 8px 16px;
+        text-decoration: none;
+      }
+      li a:hover {
+        background-color: #4CAF50;
+        color: #fff;
+      }
+      .active {
+        background-color: #4CAF50;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    
+
+    <form id="feedback-form" action="submit-feedback.php" method="post">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+      <label for="email">Email:</label>
+      <input type="text" id="email" name="email" placeholder="Enter your email" required>
+
+      <label for="feedback-type">Feedback Type:</label>
+
+      <select id="feedback-type" name="feedback-type" required>
+        <option value="">Select a feedback type</option>
+        <option value="complaint">Complaint</option>
+        <option value="suggestion">Suggestion</option>
+        <option value="compliment">Compliment</option>
+      </select>
+
+      <label for="message">Feedback:</label>
+      <textarea id="message" name="message" placeholder="Enter your Feedback" required></textarea>
+
+      <input type="submit" value="Submit Feedback">
+    </form>
+    </div>
+	<br><br><br><br>
+	<center>
+	<ul>
+      <li><a class="active" href="#feedback-form">Feedback Form</a></li>
+      <li><a href="#about-us">About Us</a></li>
+      <li><a href="#contact-us">Contact Us</a></li>
+    </ul>
+</center>
+</body>
+</html>
